@@ -1,0 +1,376 @@
+/* Reset box-sizing and basic styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: #e2e2e2;
+  
+}
+
+
+/* Navbar styles */
+/* Navbar styles */
+.navbar {
+  background-color: #0c0c0c; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  color: white;
+}
+
+.navbar ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.navbar li {
+  margin: 0 15px;
+  display: flex;
+
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+
+
+.hamburger {
+  display: none; /* Show/hide based on media query */
+  font-size: 24px;
+  color: white; /* Ensure visibility */
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none; /* Hide by default on small screens */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    position: absolute; /* Positioning for dropdown */
+    background-color: #333;
+    top: 60px; /* Below the navbar */
+    width: 100%; /* Full width */
+  }
+
+  .navbar.active ul {
+    display: flex; /* Show nav items when active */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+}
+
+/* Main section styles */
+.main {
+  padding-top: 60px; /* Offset for fixed navbar */
+  text-align: center;
+  background-color:black;
+}
+/* .bg{
+  background-color: black;
+} */
+
+.container {
+  /* background-color: #f4f4f4; */
+  /* background-color: rgb(176, 228, 234); */
+  background-color: black;
+  color: white;
+  padding: 60px 20px;
+}
+
+.container p {
+  font-size: 24px;
+}
+
+.animation .first1, .animation .first2, .animation .first3 {
+  display: block;
+  font-size: 36px;
+  margin: 10px 0;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* About section styles */
+.second {
+  background-color: #e2e2e2;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 40px;
+}
+
+.one img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.two {
+  margin: 20px 0;
+}
+
+.two h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.two p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.three ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.three li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.btn{
+  border:2px solid black;
+  border-radius: 5px;
+  /* z-index: 10px; */
+  background-color: transparent;
+  padding:10px;
+}
+.btn:hover{
+  box-shadow:0 0 8px rgb(64, 63, 63);
+}
+
+/* Skills section styles */
+#skills{
+  background-color: #e2e2e2;
+}
+.head h2{
+  align-items: center;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+}
+
+.skill {
+  flex: 1 1 200px;
+  max-width: 200px;
+  text-align: center;
+}
+
+.circle-wrap {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  background: conic-gradient(#4d5bf9 70%, #ededed 0%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inside-circle {
+  font-size: 18px;
+}
+
+/* Projects section styles */
+#project{
+  background-color: #e2e2e2;
+}
+#contact{
+  background-color: #e2e2e2;
+}
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+}
+
+.project {
+  position: relative;
+  width: 250px;
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project .para {
+  padding: 10px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+.middle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 24px;
+}
+
+.image-link img {
+  width: 50px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer h2 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+.list ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.list img {
+  width: 50px;
+}
+.insta{
+  width:60px;
+  height:50px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none; /* Hide by default */
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    position: absolute; /* Dropdown positioning */
+    background-color: #333;
+    top: 60px; /* Below navbar */
+    width: 100%;
+  }
+
+  .navbar.active ul {
+    display: flex; /* Show nav items when active */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+
+  .navbar ul {
+    display: none; /* Hide nav items by default */
+  }
+
+  .container p {
+    font-size: 20px;
+  }
+
+  .animation .first1, .animation .first2, .animation .first3 {
+    font-size: 28px;
+  }
+
+  .skills-container {
+    padding: 40px 20px;
+  }
+
+  .skill {
+    flex: 1 1 150px;
+    max-width: 150px;
+  }
+
+  .projects-container {
+    padding: 40px 20px;
+  }
+
+  .project {
+    width: 200px;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+}
